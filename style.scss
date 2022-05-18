@@ -16,20 +16,28 @@ body {
     text-decoration: none;
     color: white;
   }
-
-  .header {
-    background: url(img/header-bg.jpg);
-    width: 1600px;
-    height: 900px;
-  }
   .container {
     width: 1170px;
     margin: 0 auto;
+    overflow: hidden;
   }
+  .header {
+    position: relative;
+    // background: url(img/header-bg.jpg) center/contain no-repeat;
+    width: 100%;
+    height: 700px;
+    img {
+      max-width: 100%;
+      position: absolute;
+    }
+  }
+ 
   .nav {
-    padding-top: 51px;
+    position: relative;
+    padding: 51px;
     display: flex;
     justify-content: space-between;
+    z-index: 999;
   }
   ul.menu {
   }
@@ -63,7 +71,10 @@ section.about {
 
   color: initial;
   .title {
-      margin-top: 8rem;
+      margin-top: 10px;
+      h2 {
+        margin: 0;
+      }
   }
   
   .about-content {
